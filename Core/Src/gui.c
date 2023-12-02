@@ -5,7 +5,7 @@
 
 
 extern const uint8_t locked[];
-
+extern const uint8_t boom[];
 
 void GUI_init(void)
 {
@@ -20,14 +20,17 @@ void GUI_locked(void)
 	ssd1306_WriteString("Locked", Font_16x26, White);
 	ssd1306_DrawBitmap(50, 35, locked, 30, 30, White);
 	ssd1306_UpdateScreen();
+	GUI_update_password_init();
+
 }
 
 void GUI_unlocked(void)
 {
 	ssd1306_Fill(Black);
 	ssd1306_SetCursor(5, 5);
-	ssd1306_WriteString("Unlocked", Font_16x26, White);
+	ssd1306_WriteString("BOMBA ACTIVADA", Font_7x10, White);
 	ssd1306_UpdateScreen();
+
 }
 
 void GUI_update_password_init(void)
@@ -49,6 +52,14 @@ void GUI_update_password_success(void)
 {
 	ssd1306_SetCursor(5, 35);
 	ssd1306_WriteString("Success!", Font_16x26, White);
+	ssd1306_UpdateScreen();
+}
+void GUI_boom(void)
+{
+	ssd1306_Fill(Black);
+	ssd1306_SetCursor(20, 5);
+	ssd1306_WriteString("boom", Font_16x26, White);
+	ssd1306_DrawBitmap(50, 35, boom, 40, 40, White);
 	ssd1306_UpdateScreen();
 }
 

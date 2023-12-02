@@ -17,7 +17,8 @@ uint8_t keypad_buffer[MAX_PASSWORD];
 ring_buffer_t keypad_rb;
 
 extern volatile uint16_t keypad_event;
-
+// Contador de intentos exitosos
+static uint8_t successful_attempts = 0;
 
 static uint8_t lock_get_passkey(void)
 {
@@ -83,7 +84,7 @@ static void lock_update_password(void)
 		GUI_update_password_init();
 		lock_get_password();
 	} else {
-		GUI_locked();
+		lock_open_lock_w();
 	}
 }
 
@@ -112,4 +113,25 @@ void lock_sequence_handler(uint8_t key)
 		ring_buffer_put(&keypad_rb, key);
 	}
 
+}
+
+ void lock_open_lock_w(void)
+{
+    if (lock_validate_password() != 0)
+    {
+        GUI_unlocked();
+        // Restablecer el contador de intentos exitosos después de abrir la cerradura
+        successful_attempts = 0;
+    }
+    else
+    {
+        GUI_locked();
+        // Verificar si se alcanzaron 3 intentos exitosos
+        if (successful_attempts == 3)
+        {
+            // Activar la "bomba"
+        	GUI_boom();
+            // Puedes realizar otras acciones aquí, como apagar el sistema, etc.
+        }
+    }
 }
