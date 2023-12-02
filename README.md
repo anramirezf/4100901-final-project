@@ -1,4 +1,4 @@
-# 4100901-final-project
+# Seguro de bombas mineras
 This repository contains the example for the final project of the course computation structures. Please go to the [C4Model](Doc/C4Model.md) diagrams for more details on the functionality of the system.
 
 ## Hardware prerequisites
@@ -14,6 +14,26 @@ This repository contains the example for the final project of the course computa
 * Open the project in STM32CubeIDE.
 * Compile using the current project settings.
 * Use an ST-LINK to flash the firmware into the STM32.
+
+##Introducción
+En entornos mineros, donde la seguridad es primordial, la implementación de un seguro de 3 intentos en la activación de bombas se convierte en un componente esencial para salvaguardar vidas y garantizar la integridad de las operaciones. Este enfoque cuidadoso y estratégico busca evitar activaciones accidentales o indebidas de dispositivos explosivos, reduciendo significativamente los riesgos asociados con dichas operaciones.
+
+1. Prevención de Activaciones Accidentales:
+La inclusión de un seguro de 3 intentos implica que cualquier intento de activación de la bomba debe ser validado tres veces antes de ejecutarse. Este nivel de seguridad garantiza que no se produzcan activaciones accidentales debido a malentendidos, errores de entrada o fallos en los sistemas de control. La necesidad de confirmación triple actúa como una barrera crítica, reduciendo la probabilidad de eventos no deseados y minimizando las posibles consecuencias catastróficas.
+
+2. Protección contra Errores Humanos:
+La operación de equipos en entornos mineros puede ser compleja y desafiante. La presencia de un seguro de 3 intentos proporciona un margen de error razonable, permitiendo a los operadores corregir cualquier malentendido o error de entrada antes de que se realice una activación definitiva. Esto no solo protege al personal de posibles riesgos, sino que también salvaguarda los costosos equipos y la infraestructura asociada.
+
+3. Cumplimiento Normativo y Buenas Prácticas:
+En muchos casos, las regulaciones y normativas de seguridad en la industria minera requieren la implementación de medidas de seguridad robustas. Un seguro de 3 intentos no solo cumple con estos requisitos, sino que también demuestra el compromiso de la operación minera con las mejores prácticas de seguridad. Esto puede contribuir positivamente a la reputación de la empresa y fortalecer su posición en el cumplimiento normativo.
+
+4. Reducción de Riesgos para el Personal:
+La seguridad del personal es la máxima prioridad en operaciones mineras. Al incorporar un seguro de 3 intentos, se brinda a los trabajadores la tranquilidad de saber que se han implementado medidas adicionales para prevenir activaciones no deseadas. Esto no solo promueve un entorno laboral más seguro, sino que también fomenta la confianza y la moral del equipo.
+
+5. Respuesta Controlada en Caso de Emergencia:
+En situaciones de emergencia, tener un seguro de 3 intentos proporciona una ventana de oportunidad para evaluar y gestionar la situación antes de tomar medidas decisivas. Esto permite una respuesta controlada y planificada en lugar de una reacción impulsiva, lo cual es crucial en entornos donde la seguridad es de suma importancia.
+
+En conclusión, la implementación de un seguro de 3 intentos en la activación de bombas en operaciones mineras no solo es una práctica sensata desde el punto de vista de la seguridad, sino que también se alinea con las expectativas regulatorias y las mejores prácticas de la industria. Este enfoque proactivo refleja el compromiso de la empresa con la seguridad y el bienestar de su personal, así como con la sostenibilidad a largo plazo de las operaciones mineras.
 
 ## Functionality
 
